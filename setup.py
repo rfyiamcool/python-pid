@@ -6,12 +6,12 @@ def read(fname):
 
 setup(
         name = "python-pid",
-        version = "1.0",
+        version = "2.2.0",
         author = "ruifengyun",
         author_email = "rfyiamcool@163.com",
         description = "python pid manager",
         license = "MIT",
-        keywords = ["python pid unix","fengyun","ruifengyun"],
+        keywords = ["python pid fcntl","fengyun","ruifengyun"],
         url = "https://github.com/rfyiamcool",
         packages = find_packages(),
         long_description = read('README.md'),
