@@ -9,6 +9,7 @@
 本来是打算把进程名字和daemon都做进去的,但是考虑Pid本是个判断进程在不在的事事，没必要让别的逻辑参合进来.
 
 ## 安装方法
+
 方法1.
 ```
 pip install python-pid
@@ -49,7 +50,7 @@ f.release()
 ```
 with PidFile("mydaemon"):
     time.sleep(100)
-    print 123
+    print 'blog:  xiaorui.cc'
 ```
 
 END... ...
