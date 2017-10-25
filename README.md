@@ -25,14 +25,12 @@ python setup.py install
 ## 使用方法
 
 可以在你的主函数加一个装饰器，可以传递pidfile的文件路径.
-```
 
-#coding:utf-8
-@PidFileDeco('my')
+```
+@PidFileDeco('my.pid')
 def main():
     import time
     time.sleep(1000)
-
 ```
 或者是直接调用，acquire是锁定，release()是释放
 
@@ -40,7 +38,7 @@ def main():
 import time
 from python_pid import PidFile
 
-f = PidFile("mydaemon")
+f = PidFile("my.pid")
 f.acquire()
 time.sleep(100)
 f.release()
@@ -48,7 +46,7 @@ f.release()
 
 使用with关键词,调用__enter__ , __exit__
 ```
-with PidFile("mydaemon"):
+with PidFile("my.pid"):
     time.sleep(100)
     print 'blog:  xiaorui.cc'
 ```
